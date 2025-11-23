@@ -1,0 +1,206 @@
+/* Base ------------------------------------------------------- */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #111;
+
+  line-height: 1.65;
+  letter-spacing: 0.2px;
+
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.section:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 50px;
+}
+
+/* Hero / Header ---------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.hero-photo-frame {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  animation: fadeIn 1.5s ease, float 6s ease-in-out infinite;
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 18px;
+  font-size: 2.4rem;
+}
+
+.headline {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 5px;
+}
+
+.contact-links {
+  margin-top: 15px;
+}
+
+.contact-links a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Cards ------------------------------------------------------- */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card .date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.card a {
+  color: #0077ff;
+}
+
+/* Projects ---------------------------------------------------- */
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.project-card {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.tech {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Skills ------------------------------------------------------ */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-grid span {
+  background: #eee;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Footer ------------------------------------------------------ */
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* Animations -------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Fade-in sections on scroll */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Gradient text ------------------------------------------------ */
+.gradient-text {
+  background: linear-gradient(90deg, #007AFF, #00C6FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+}

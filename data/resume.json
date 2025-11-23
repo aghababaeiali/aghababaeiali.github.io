@@ -1,0 +1,121 @@
+{
+  "name": "Ali Aghababaei",
+  "title": "AI Engineer • NLP Researcher • ML Developer",
+  "photo": "./photo.jpeg",
+
+  "contact": {
+    "email": "ali.aghababaei@studenti.unipd.it",
+    "phone": "+39 351 611 4784",
+    "location": "Padua, Italy",
+    "linkedin": "https://linkedin.com/in/aliaghababaeii"
+  },
+
+  "summary": "AI/ML engineer with experience in NLP, model interpretability, and data-driven systems. Skilled in building machine-learning pipelines, developing deep-learning models, and creating full-stack applications. Passionate about explainable AI, large language models, and human-centered machine intelligence.",
+
+  "experience": [
+    {
+      "role": "Research Assistant",
+      "company": "University of Padova",
+      "range": "Jun 2024 — Dec 2024",
+      "details": [
+        "Developed interpretability workflows for transformer models (BERT, RoBERTa).",
+        "Applied Integrated Gradients to socio-psychological semantic markers.",
+        "Validated predictions using human-annotated datasets (Slurs, Twitter COVID)."
+      ]
+    },
+    {
+      "role": "Intern",
+      "company": "Sorak Taban Electricity Distribution Company",
+      "range": "Summer 2018",
+      "details": [
+        "Designed electrical installation layouts for transformer sites.",
+        "Conducted power requirement calculations.",
+        "Collaborated with engineering teams and municipal authorities."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "University of Padova",
+      "program": "M.Sc. ICT for Internet and Multimedia",
+      "range": "Sep 2022 — Jul 2025",
+      "details": "GPA 110/110 (Top 5%). Thesis on applying Integrated Gradients for NLP interpretability."
+    },
+    {
+      "institution": "Warsaw University of Technology",
+      "program": "Erasmus Exchange",
+      "range": "Oct 2023 — Feb 2024",
+      "details": "GPA 4.75/5.0."
+    },
+    {
+      "institution": "Ferdowsi University of Mashhad",
+      "program": "B.Sc. Electrical Engineering",
+      "range": "Sep 2014 — Sep 2019",
+      "details": "GPA 14.46/20."
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Kuzushiji Script Classifier",
+      "description": "Built SVM and neural-network models to classify ancient Japanese cursive script.",
+      "tech": ["Python", "Scikit-learn", "NumPy"]
+    },
+    {
+      "title": "Image Repair via SIFT Patch Matching",
+      "description": "Restored corrupted images using custom C + OpenCV implementations.",
+      "tech": ["C", "OpenCV"]
+    },
+    {
+      "title": "Fashion-MNIST Classifier",
+      "description": "Developed a neural network to classify 10 fashion categories.",
+      "tech": ["Octave", "Neural Networks"]
+    },
+    {
+      "title": "Full-Stack Bookstore Web App",
+      "description": "Created an online bookstore with frontend and backend components.",
+      "tech": ["HTML", "CSS", "JavaScript", "Node.js"]
+    }
+  ],
+
+  "skills": {
+    "programming": ["Python", "C", "MATLAB"],
+    "deep_learning": ["PyTorch", "TensorFlow", "Keras"],
+    "nlp": ["SpaCy", "Transformers", "NLTK", "Gensim"],
+    "interpretability": ["Captum", "SHAP", "LIME"],
+    "computer_vision": ["OpenCV", "PIL", "Scikit-Image"],
+    "machine_learning": ["Scikit-learn", "XGBoost", "LightGBM"],
+    "visualization": ["Matplotlib", "Seaborn", "Plotly"],
+    "data": ["Pandas", "NumPy", "SQL"],
+    "tools": ["Git", "LaTeX", "Microsoft Office"]
+  },
+
+  "languages": [
+    "English (C2)",
+    "Italian (A2)",
+    "Persian (Native)"
+  ],
+
+  "research_interests": [
+    "Distributed Systems",
+    "Data-Driven Modeling",
+    "Deep Learning",
+    "Network Science",
+    "Explainable AI",
+    "Human-AI Collaboration"
+  ],
+
+  "publications": [
+    {
+      "title": "Explainability of Transformer Models via Integrated Gradients",
+      "venue": "arXiv:2503.04989",
+      "link": "https://arxiv.org/abs/2503.04989"
+    },
+    {
+      "title": "Artificial Intelligence in Agro-Food Systems: From Farm to Fork",
+      "venue": "Foods, 2025",
+      "link": "https://doi.org/10.3390/foods14030411"
+    }
+  ]
+}
