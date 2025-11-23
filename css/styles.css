@@ -84,6 +84,16 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
+.contact-links a {
+  margin: 0 10px;
+  font-size: 1.4rem;
+  color: #0077ff;
+}
+
+.contact-links a:hover {
+  color: #005fcc;
+}
+
 .contact-links a:hover {
   text-decoration: underline;
 }
@@ -203,4 +213,4 @@ h1, h2, h3 {
   -webkit-text-fill-color: transparent;
 }
 
-}
+
