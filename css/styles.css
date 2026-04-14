@@ -105,6 +105,13 @@ em { font-family: var(--font-display); font-style: italic; }
   color: var(--bg);
 }
 
+.menu-button {
+  display: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -862,7 +869,29 @@ em { font-family: var(--font-display); font-style: italic; }
   .about-layout { grid-template-columns: 1fr; gap: 32px; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: span 1; }
-  .nav-links { display: none; }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .pub-item { grid-template-columns: 1fr; gap: 8px; }
   .pub-year { padding-top: 0; }
 }

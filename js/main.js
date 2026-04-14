@@ -55,3 +55,21 @@ window.addEventListener("scroll", () => {
     ? "rgba(11,12,15,0.95)"
     : "rgba(11,12,15,0.75)";
 }, { passive: true });
+
+// ── Mobile menu toggle ───────────────────────────────────────
+const menuBtn = document.getElementById("menu-btn");
+const navLinksContainer = document.querySelector(".nav-links");
+
+if (menuBtn && navLinksContainer) {
+  menuBtn.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  const navItems = navLinksContainer.querySelectorAll("a");
+  navItems.forEach(item => {
+    item.addEventListener("click", () => {
+      navLinksContainer.classList.remove("active");
+    });
+  });
+}
