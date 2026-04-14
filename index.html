@@ -3,143 +3,336 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ali Aghababaei — Resume</title>
+  <title>Ali Aghababaei — NLP & Generative AI Engineer</title>
   <link rel="stylesheet" href="./css/styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script defer src="./js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="./js/main.js"></script>
 </head>
-
 <body>
 
-  <!-- HEADER / HERO -->
-  <header class="hero fade-section">
-    <div class="hero-content">
-
-      <div class="hero-photo-frame">
-        <img src="./photo.jpeg" alt="Ali Aghababaei Photo">
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">AA</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="#recommendations">Recommendations</a>
       </div>
-
-      <h1 class="name gradient-text">Ali Aghababaei</h1>
-      <p class="headline">AI Engineer • NLP Researcher • Machine Learning Developer</p>
-
-      <div class="contact-links">
-        <a href="mailto:ali.aghababaei96@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/aliaghababaeii" target="_blank" title="LinkedIn"><i
-            class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/aghababaeiali" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://scholar.google.com/citations?user=aVXq3w4AAAAJ&hl=en" target="_blank" title="Google Scholar"><i
-            class="fa-solid fa-graduation-cap"></i></a>
-        <a href="../public/resume.pdf" target="_blank" title="Download CV"><i class="fa-solid fa-file-arrow-down"></i></a>
-      </div>
-
-
+      <a href="../public/resume.pdf" class="nav-cta" target="_blank">CV <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Open to opportunities · Netherlands</div>
+      <h1 class="hero-name">Ali<br><em>Aghababaei</em></h1>
+      <p class="hero-role">NLP &amp; Generative AI Engineer</p>
+      <p class="hero-tagline">Building AI systems that don't just classify, they help people make sense of what others are saying.</p>
+      <div class="hero-actions">
+        <div class="hero-photo-frame" style="width: 200px; height: 200px;">
+          <img src="./photo.jpeg" alt="Ali Aghababaei" style="width: 100%; height: 100%; object-fit: cover;"/>
+        </div>
+        <div class="hero-contacts">
+          <a href="mailto:ali.aghababaei96@gmail.com" class="contact-pill"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a href="https://linkedin.com/in/aliaghababaeii" target="_blank" class="contact-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/aghababaeiali" target="_blank" class="contact-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.com/citations?user=aVXq3w4AAAAJ&hl=en" target="_blank" class="contact-pill"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">scroll <i class="fa-solid fa-arrow-down"></i></div>
   </header>
 
   <!-- ABOUT -->
-  <section id="about" class="section fade-section">
-    <h2>About Me</h2>
-    <p>
-      AI/ML engineer with strong experience in NLP, model interpretability, and data-driven modeling.
-      Skilled in Python, deep learning frameworks, and building complete ML pipelines from
-      research to deployment. Passionate about explainable AI, large language models, and
-      human-centered machine learning.
-    </p>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section fade-section">
-    <h2>Experience</h2>
-
-    <div class="card">
-      <h3>Research Assistant — University of Padova</h3>
-      <span class="date">Jun 2024 — Dec 2024</span>
-      <ul>
-        <li>Developed interpretability workflows for transformer models (BERT, RoBERTa).</li>
-        <li>Applied Integrated Gradients to socio-psychological semantics.</li>
-        <li>Validated predictions against annotated datasets (Slurs, Twitter COVID).</li>
-      </ul>
+  <section id="about" class="section reveal">
+    <div class="section-label">01 / About</div>
+    <div class="about-layout">
+      <h2 class="section-title">From harassment datasets<br>to generative AI</h2>
+      <div class="about-body">
+        <p>My path into NLP started with a dataset about harassment, real stories shared by women, labeled by the degree of fear, shame, and toxicity they experienced. Working with BERT and RoBERTa to model those emotions was meaningful, but what really hooked me was the next question my professor asked: <em>which words are actually driving the model's decisions, and by how much?</em></p>
+        <p>That question led me deep into explainability: Integrated Gradients, SHAP, LIME, and collaboration with psychologists to validate whether what the model found actually made human sense. It was the moment I realized NLP sits at a rare intersection of rigorous engineering and direct human relevance.</p>
+        <p>What excites me most now is using generative AI to understand text at scale, analyzing social media comments, surfacing patterns, and building systems that can respond intelligently based on real context. Work where a model doesn't just classify, but helps people make sense of what others are saying.</p>
+        <p>There's also a personal thread here. During my electrical engineering degree, research was slow and exhausting. When LLMs arrived during my master's, I watched that change overnight. That shift made me want to be on the side that builds these tools, not just uses them.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Intern — Sorak Taban Electricity Distribution Co.</h3>
-      <span class="date">Summer 2018</span>
-      <ul>
-        <li>Designed transformer installation layouts & power requirement calculations.</li>
-        <li>Coordinated with engineering teams and municipal authorities.</li>
-      </ul>
+    <!-- Education inline -->
+    <div class="edu-strip">
+      <div class="edu-item">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <strong>MSc, ICT for Internet and Multimedia</strong>
+          <span>University of Padova, Italy · 2022–2024</span>
+          <span> GPA: 110/110 </span>
+          <em>Thesis: Explainability of sociopsychological markers via Integrated Gradients</em>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <strong>BSc, Electrical Engineering</strong>
+          <span>Iran · 2014–2019</span>
+        </div>
+      </div>
     </div>
-
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section fade-section">
-    <h2>Projects</h2>
+  <section id="projects" class="section reveal">
+    <div class="section-label">02 / Projects</div>
+    <h2 class="section-title">Selected work</h2>
 
     <div class="projects-grid">
 
-      <div class="project-card">
-        <h3>Kuzushiji Script Classifier</h3>
-        <p>Built SVM and neural network models to classify ancient Japanese cursive script.</p>
-        <span class="tech">Python, Scikit-learn, NumPy</span>
+      <article class="project-card featured">
+        <div class="project-meta">
+          <span class="project-tag">Explainability · Research</span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>Explainable NLP with Integrated Gradients</h3>
+        <p>Fine-tuned BERT and RoBERTa on a harassment dataset labeled with psychological markers (fear, shame, toxicity). Applied Integrated Gradients via Captum for token-level attribution, with SHAP and LIME for comparison. Validated results with psychologists. Contributed to a published arXiv paper.</p>
+        <img src="./screenshots/with_grouping.png" alt="Explainability Demo" style="max-width: 50%; height: auto; display: block; margin: 0 auto;"/>
+        <div class="project-footer">
+          <div class="tech-tags">
+            <span>BERT</span><span>RoBERTa</span><span>Captum</span><span>SHAP</span><span>LIME</span>
+          </div>
+          <div class="project-links">
+            <a href="https://arxiv.org/abs/2503.04989" target="_blank">Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://github.com/aghababaeiali/agency-ig" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span class="project-tag">Classification · Deployment</span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>NLP Sentiment Analysis Pipeline</h3>
+        <p>Full lifecycle sentiment system: fine-tuned DistilBERT for lightweight serving, achieving <strong>88% accuracy &amp; F1</strong> on IMDB. Ships as a FastAPI service, Dockerized, live on Render, and published to Hugging Face Hub.</p>
+        <img src="./screenshots/sentiment.gif" alt="Sentiment Analysis Demo"/>
+        <div class="project-footer">
+          <div class="tech-tags">
+            <span>DistilBERT</span><span>FastAPI</span><span>Docker</span><span>Render</span>
+          </div>
+          <div class="project-links">
+            <a href="https://nlp-sentiment-pipeline.onrender.com" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://github.com/aghababaeiali/nlp-sentiment-pipeline" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span class="project-tag">Generation · Fine-tuning</span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>Text Summarization Pipeline</h3>
+        <p>Conversational summarization with FLAN-T5 fine-tuned via LoRA — cutting trainable parameters dramatically without sacrificing quality on the Samsum dataset. Deployed as a FastAPI service with an interactive Gradio demo on Hugging Face Spaces.</p>
+        <img src="./screenshots/summarization.gif" alt="Summarization Demo"/>
+        <div class="project-footer">
+          <div class="tech-tags">
+            <span>FLAN-T5</span><span>LoRA</span><span>FastAPI</span><span>Gradio</span>
+          </div>
+          <div class="project-links">
+            <a href="https://huggingface.co/spaces/aliabbi/text-summarization-pipeline" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://github.com/aghababaeiali/text-summarization-pipeline" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-meta">
+          <span class="project-tag">Multimodal · Vision-Language</span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>Image Captioning Application</h3>
+        <p>Multimodal app generating natural language captions from images using BLIP. Supports single and batch captioning, plus a web scraping pipeline to caption images directly from URLs. Deployed on Hugging Face Spaces with Gradio.</p>
+        <img src="./screenshots/caption.gif" alt="Image Captioning Demo"/>
+        <div class="project-footer">
+          <div class="tech-tags">
+            <span>BLIP</span><span>Gradio</span><span>Transformers</span>
+          </div>
+          <div class="project-links">
+            <a href="https://aliabbi-image-captioning-blip.hf.space" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://github.com/aghababaeiali/image-captioning-blip" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card more-card">
+        <i class="fa-brands fa-github more-icon"></i>
+        <h3>More on GitHub</h3>
+        <p>Additional experiments, smaller projects, and work in progress.</p>
+        <a href="https://github.com/aghababaeiali" target="_blank" class="more-link">View all repositories <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <div class="section-label">03 / Skills</div>
+    <h2 class="section-title">Technical toolkit</h2>
+    <div class="skills-layout">
+      <div class="skill-group">
+        <div class="skill-group-label">Core · daily use</div>
+        <div class="skills-grid">
+          <span>Python</span><span>PyTorch</span><span>Hugging Face Transformers</span>
+          <span>BERT / RoBERTa</span><span>T5 / FLAN-T5</span><span>FastAPI</span><span>Git</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Proficient · project use</div>
+        <div class="skills-grid">
+          <span>Docker</span><span>Gradio</span><span>SpaCy</span><span>Scikit-learn</span>
+          <span>Captum</span><span>SHAP</span><span>LIME</span><span>GPT APIs</span>
+          <span>LoRA / PEFT</span><span>Prompt Engineering</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Familiar · working knowledge</div>
+        <div class="skills-grid">
+          <span>TensorFlow</span><span>SQL</span><span>LangChain</span><span>RAG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section reveal">
+    <div class="section-label">04 / Experience</div>
+    <h2 class="section-title">Where I've worked</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jun 2024 — Dec 2024</div>
+        <div class="timeline-body">
+          <h3>Research Assistant</h3>
+          <span class="timeline-org">University of Padova, Italy</span>
+          <p>Investigated sociopsychological markers in text alongside my thesis supervisor — properties like agency that go beyond standard sentiment. Fine-tuned BERT, RoBERTa, and BERTAgent; compared attribution methods and selected Integrated Gradients for its precision. Validated findings through a social psychology lens on small labeled datasets. Contributed to a published arXiv paper.</p>
+          <a href="https://arxiv.org/abs/2503.04989" target="_blank" class="inline-link">Read the paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3>Image Repair via SIFT Patch Matching</h3>
-        <p>Restored corrupted images using custom C + OpenCV implementations.</p>
-        <span class="tech">C, OpenCV</span>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2019 — 2022</div>
+        <div class="timeline-body">
+          <h3>Technical Expert</h3>
+          <span class="timeline-org">Mazand Phase Industrial Electricity Co., Iran</span>
+          <p>Managed engineering operations in industrial environments — then made a deliberate pivot into AI and machine learning research when LLMs changed what research could look like overnight.</p>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3>Fashion-MNIST Classifier</h3>
-        <p>Trained a neural network for 10-class fashion item recognition.</p>
-        <span class="tech">Octave/Matlab, Neural Networks</span>
-      </div>
-
-      <div class="project-card">
-        <h3>Full-Stack Bookstore Webapp</h3>
-        <p>Collaborated on a complete online bookstore (frontend + backend).</p>
-        <span class="tech">HTML, CSS, JS, Node.js</span>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Summer 2018</div>
+        <div class="timeline-body">
+          <h3>Electrical Engineering Intern</h3>
+          <span class="timeline-org">Sorak Taban Electricity Distribution Co., Iran</span>
+          <p>Assisted in infrastructure planning and technical documentation during undergraduate studies.</p>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- PUBLICATIONS -->
-  <section id="publications" class="section fade-section">
-    <h2>Publications</h2>
+  <section id="publications" class="section reveal">
+    <div class="section-label">05 / Publications</div>
+    <h2 class="section-title">Research</h2>
 
-    <div class="card">
-      <h3>Explainability in Transformer Models</h3>
-      <p>Applied Integrated Gradients to socio-psychological semantic markers.</p>
-      <a href="https://arxiv.org/abs/2503.04989" target="_blank">View on arXiv</a>
-    </div>
-
-    <div class="card">
-      <h3>AI in Agro-Food Systems</h3>
-      <p>Overview of AI applications along the farm-to-fork chain.</p>
-      <a href="https://doi.org/10.3390/foods14030411" target="_blank">Journal Link</a>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <span class="pub-venue">arXiv preprint</span>
+          <h3>Application of Integrated Gradients Explainability to Sociopsychological Semantic Markers</h3>
+          <p>Addresses the gap between sentence-level classification of sociopsychological markers and understanding which specific words drive those decisions. Applies Integrated Gradients for word-level attribution, with an unconventional training procedure that encourages overfitting to sharpen class distinctiveness — validated through social psychology.</p>
+          <a href="https://arxiv.org/abs/2503.04989" target="_blank" class="inline-link">Read on arXiv <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <span class="pub-venue">Foods Journal · MDPI</span>
+          <h3>Artificial Intelligence in Agro-Food Systems: From Farm to Fork</h3>
+          <p>Interdisciplinary review of AI applications across the agro-food value chain, from production and processing to distribution and consumption. Contributed as part of research activities during the master's program at Padova.</p>
+          <a href="https://doi.org/10.3390/foods14030411" target="_blank" class="inline-link">Read in Foods Journal <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section fade-section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>Python</span> <span>PyTorch</span> <span>TensorFlow</span>
-      <span>Keras</span> <span>Transformers</span> <span>SpaCy</span>
-      <span>SHAP</span> <span>LIME</span> <span>Captum</span>
-      <span>OpenCV</span> <span>SVM</span> <span>LightGBM</span>
-      <span>Pandas</span> <span>NumPy</span> <span>SQL</span>
-      <span>Git</span> <span>LaTeX</span>
+  <!-- RECOMMENDATIONS -->
+  <section id="recommendations" class="section reveal">
+    <div class="section-label">06 / Recommendations</div>
+    <h2 class="section-title">What colleagues say</h2>
+
+    <div class="recs-grid">
+
+      <div class="rec-card">
+        <div class="rec-quote-mark">"</div>
+        <blockquote>Ali proved to be a bright researcher, capable of reading the literature and identifying relevant tools, capable of implementing them and properly measuring their effectiveness. He is a very committed and trustworthy person, independent and determined. I would strongly suggest hiring him.</blockquote>
+        <div class="rec-author">
+          <strong>Prof. Tomaso Erseghe</strong>
+          <span>Associate Professor, University of Padova</span>
+          <span>Thesis Supervisor</span>
+          <a href="./recoms/Erseghe_Recom.pdf" target="_blank" class="inline-link">Full letter <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-quote-mark">"</div>
+        <blockquote>Ali has a strong technical background and has consistently demonstrated his ability to apply theoretical knowledge to practical challenges effectively. He managed to adapt well to a new academic environment within a short period, which shows great resilience and strength.</blockquote>
+        <div class="rec-author">
+          <strong>Prof. Marco Giordani, Ph.D.</strong>
+          <span>Associate Professor, University of Padova</span>
+          <span>Director, SSIE PhD Summer School</span>
+          <a href="./recoms/Giordani_Recom.pdf" target="_blank" class="inline-link">Full letter <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <div class="rec-card">
+        <div class="rec-quote-mark">"</div>
+        <blockquote>Ali consistently demonstrated exceptional academic prowess, earning the highest marks in both the written exam and the project. He displayed a keen intellect, a strong work ethic, and an ability to grasp complex concepts quickly.</blockquote>
+        <div class="rec-author">
+          <strong>Prof. Mieczyslaw Muraszkiewicz</strong>
+          <span>Professor, Warsaw University of Technology</span>
+          <span>Institute of Computer Science</span>
+          <a href="./recoms/Muraszkiewicz_Recom.pdf" target="_blank" class="inline-link">Full letter <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Ali Aghababaei</p>
+    <div class="footer-inner">
+      <span class="footer-name">Ali Aghababaei</span>
+      <div class="footer-links">
+        <a href="mailto:ali.aghababaei96@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/aliaghababaeii" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/aghababaeiali" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <span class="footer-copy">© 2026</span>
+    </div>
   </footer>
 
 </body>
