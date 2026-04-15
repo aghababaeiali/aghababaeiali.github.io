@@ -487,9 +487,25 @@ em { font-family: var(--font-display); font-style: italic; }
   flex: 1;
 }
 
+
 .project-card img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.project-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-images img {
+  max-width: 48%;
+  height: auto;
+  display: block;
   border-radius: 8px;
   border: 1px solid var(--border);
 }
