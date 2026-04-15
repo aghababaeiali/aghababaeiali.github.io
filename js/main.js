@@ -73,3 +73,17 @@ if (menuBtn && navLinksContainer) {
     });
   });
 }
+
+// ── Back to top button ────────────────────────────────────────
+const backToTop = document.createElement("button");
+backToTop.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+backToTop.className = "back-to-top";
+document.body.appendChild(backToTop);
+
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", window.scrollY > 500);
+}, { passive: true });
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
