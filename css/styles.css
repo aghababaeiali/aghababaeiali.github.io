@@ -946,6 +946,8 @@ em { font-family: var(--font-display); font-style: italic; }
   transform: translateY(12px);
   transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s;
   pointer-events: none;
+  -webkit-tap-highlight-color: transparent; /* already good practice */
+  touch-action: manipulation;               /* prevents 300ms delay + stuck states */
 }
 
 .back-to-top.visible {
