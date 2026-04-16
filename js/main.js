@@ -86,4 +86,17 @@ window.addEventListener("scroll", () => {
 
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+
+  // 🔧 Fix: remove focus/active state after click (mobile)
+  backToTop.blur();
+  setTimeout(() => {
+    backToTop.blur();
+  }, 150);
+});
+
+// 🔧 Extra safety: clear stuck active/focus states
+["touchend", "mouseup", "mouseleave"].forEach(evt => {
+  backToTop.addEventListener(evt, () => {
+    backToTop.blur();
+  });
 });
