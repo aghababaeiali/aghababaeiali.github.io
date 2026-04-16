@@ -38,9 +38,8 @@ const activeObserver = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute("id");
       navLinks.forEach(link => {
-        link.style.color = link.getAttribute("href") === `#${id}`
-          ? "var(--text-primary)"
-          : "";
+        const isActive = link.getAttribute("href") === `#${id}`;
+        link.classList.toggle("active", isActive);
       });
     }
   });
@@ -50,11 +49,14 @@ sections.forEach(s => activeObserver.observe(s));
 
 // ── Nav: elevate on scroll ────────────────────────────────────
 const nav = document.getElementById("nav");
-window.addEventListener("scroll", () => {
-  nav.style.background = window.scrollY > 10
-    ? "rgba(11,12,15,0.95)"
-    : "rgba(11,12,15,0.75)";
-}, { passive: true });
+
+if (nav) {
+  window.addEventListener("scroll", () => {
+    nav.style.background = window.scrollY > 10
+      ? "rgba(11,12,15,0.95)"
+      : "rgba(11,12,15,0.75)";
+  }, { passive: true });
+}
 
 // ── Mobile menu toggle ───────────────────────────────────────
 const menuBtn = document.getElementById("menu-btn");
