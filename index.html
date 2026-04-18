@@ -192,11 +192,17 @@
           <span class="project-year">2026</span>
         </div>
         <h3>Text Summarization Pipeline</h3>
-        <p>Fine-tuned <strong>FLAN-T5-small</strong> on the Samsum conversational dataset using LoRA on Kaggle GPU, merging adapters before export for a lean, portable model. Inference uses engineered prompt prefixing to prevent speaker mix-ups, beam search decoding, and logs compression ratio per request. Served via FastAPI, Dockerized, and live as a Gradio demo on Hugging Face Spaces.</p>
+        <p>Fine-tuned <strong>FLAN-T5-small</strong> on the Samsum conversational dataset 
+          using LoRA on Kaggle GPU, merging adapters before export for a lean, portable model. 
+          Inference uses engineered prompt prefixing to prevent speaker mix-ups, beam search 
+          decoding, and logs compression ratio per request. Evaluated on 100 Samsum test 
+          samples — <strong>ROUGE-1: 45.09</strong> vs baseline 43.03, confirming fine-tuning 
+          improvement. Served via FastAPI, Dockerized, and live as a Gradio demo on Hugging 
+          Face Spaces.</p>
         <img src="./screenshots/summarization.gif" alt="Summarization Demo"/>
         <div class="project-footer">
           <div class="tech-tags">
-            <span>FLAN-T5</span><span>LoRA</span><span>FastAPI</span><span>Docker</span><span>Gradio</span><span>Hugging Face</span>
+            <span>FLAN-T5</span><span>LoRA</span><span>ROUGE</span><span>FastAPI</span><span>Docker</span><span>Gradio</span><span>Hugging Face</span>
           </div>
           <div class="project-links">
             <a href="https://huggingface.co/spaces/aliabbi/text-summarization-pipeline" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -255,7 +261,7 @@
         <div class="skill-group-label">ML Engineering & Deployment</div>
         <div class="skills-grid">
           <span>Scikit-learn</span><span>NumPy</span><span>Pandas</span>
-          <span>Data Preprocessing</span><span>Model Evaluation</span><span>Error Analysis</span>
+          <span>Data Preprocessing</span><span>ROUGE</span><span>Model Evaluation</span><span>Error Analysis</span>
           <span>REST APIs</span><span>FastAPI</span><span>Model Serving</span>
           <span>Inference Pipelines</span><span>Docker</span><span>Gradio</span>
           <span>Hugging Face Hub / Spaces</span><span>Pytest</span><span>Git</span>
