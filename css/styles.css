@@ -242,6 +242,13 @@ em { font-family: var(--font-display); font-style: italic; }
   animation: fadeSlideUp 0.8s 0.3s ease both;
 }
 
+@media (max-width: 720px) {
+  .hero-tagline {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
@@ -253,8 +260,8 @@ em { font-family: var(--font-display); font-style: italic; }
 }
 
 .hero-photo-frame {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 12opx;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid rgba(91,255,211,0.4);
@@ -786,6 +793,7 @@ em { font-family: var(--font-display); font-style: italic; }
   gap: 20px;
   position: relative;
   overflow: hidden;
+  justify-content: space-between;
   transition: transform 0.25s;
 }
 

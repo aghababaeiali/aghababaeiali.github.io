@@ -70,7 +70,7 @@
       <div class="hero-badge"><span class="dot"></span> Open to opportunities · Netherlands</div>
       <h1 class="hero-name">Ali<br><em>Aghababaei</em></h1>
       <p class="hero-role">NLP &amp; Generative AI Engineer</p>
-      <p class="hero-tagline">I build and evaluate GenAI systems — from RAG pipelines with measurable quality scores to explainable NLP grounded in real human data.</p>
+      <p class="hero-tagline">I build and evaluate GenAI systems: RAG pipelines with measurable quality scores, explainable NLP grounded in real human data, and transformer models deployed end-to-end.</p>
       <div class="hero-actions">
         <div class="hero-photo-frame" style="width: 200px; height: 200px;">
           <img src="./photo.jpeg" alt="Ali Aghababaei" style="width: 100%; height: 100%; object-fit: cover;"/>
@@ -92,10 +92,15 @@
     <div class="about-layout">
       <h2 class="section-title">From <i>Slurs</i> dataset<br>to generative AI</h2>
       <div class="about-body">
-        <p>My path into NLP started with the <em>Slurs</em> dataset, 336 real stories written by women describing experiences of verbal harassment, labeled by psychologists for shame, fear, and sexual objectification. Fine-tuning BERT and RoBERTa on it was meaningful work. But the question that really hooked me was: <em>which words are actually driving the model's decisions, and by how much?</em></p>
-        <p>That led me to explainability, Integrated Gradients via Captum, compared against SHAP and DeepLIFT, with results validated by social psychologists. It was the moment I realized NLP sits at a rare intersection of rigorous engineering and direct human relevance.</p>
-        <p>What excites me most now is using generative AI to understand text at scale, analyzing social media comments, surfacing patterns, and building systems that can respond intelligently based on real context. Work where a model doesn't just classify, but helps people make sense of what others are saying.</p>
-        <p>There's also a personal thread here. During my electrical engineering degree, research was slow and exhausting. When LLMs arrived during my master's, I watched that change overnight. That shift made me want to be on the side that builds these tools, not just uses them.</p>
+        <p>My path into NLP started with real data about real harm. The <em>Slurs</em> dataset contains 336 accounts written by women describing experiences of verbal harassment, labeled by social psychologists for shame, fear, and sexual objectification. Fine-tuning BERT and RoBERTa on it was meaningful work. But the question that hooked me was harder: <em>which words are actually driving the model's decisions, and by how much?</em></p>
+
+        <p>That question led to my thesis and eventually to a published paper. I applied Integrated Gradients via Captum for token-level attribution, benchmarked against DeepLIFT and GradientSHAP, and built a custom SpaCy pipeline to handle negations and subword tokens so the output was readable to social psychologists, not just engineers. The unconventional part: for small labeled datasets, we deliberately encouraged overfitting to surface the words most distinctively tied to each class. It worked. The findings were validated by social psychologists across three universities in Italy and Poland.</p>
+
+        <p>That project taught me something I carry into everything now: a model that classifies without explaining is only half useful. The other half is knowing why. That instinct is what pushed me toward evaluation-first engineering. When I built the Dutch Constitution RAG pipeline, I didn't stop at deployment. I added a full RAGAS evaluation layer, Faithfulness 0.833 and Answer Relevancy 0.657 on a held-out test set, because shipping without measuring is just guessing.</p>
+
+        <p>The longer arc: Electrical Engineering degree in Iran, two and a half years designing industrial power systems, then an MSc in ICT at Padova where LLMs arrived mid-degree and changed what I wanted to build. I finished top of my cohort with a thesis on explainability, moved to Rotterdam, and have been building and evaluating NLP systems since.</p>
+
+        <p>I am looking for NLP and GenAI engineering roles in the Netherlands where the work is serious: systems that ship, get measured, and improve.</p>
       </div>
     </div>
 
@@ -111,10 +116,18 @@
         </div>
       </div>
       <div class="edu-item">
+        <div class="edu-icon"><i class="fa-solid fa-plane"></i></div>
+        <div>
+          <strong>Erasmus Exchange Program</strong>
+          <span>Warsaw University of Technology, Poland · Oct 2023 – Feb 2024</span>
+          <em>Grade: 4.75/5.0</em>
+        </div>
+      </div>
+      <div class="edu-item">
         <div class="edu-icon"><i class="fa-solid fa-bolt"></i></div>
         <div>
           <strong>BSc, Electrical Engineering</strong>
-          <span>Ferodwis University of Mashhad, Iran · Sep 2014 – Sep 2019</span>
+          <span>Ferdowsi University of Mashhad, Iran · Sep 2014 – Sep 2019</span>
         </div>
       </div>
     </div>
@@ -133,7 +146,7 @@
           <span class="project-year">2025</span>
         </div>
         <h3>Explainable NLP with Integrated Gradients</h3>
-        <p>Fine-tuned BERT, RoBERTa, and BERTAgent on the <em>Slurs</em> dataset, women's accounts of verbal harassment labeled for shame, fear, and sexual objectification. Applied Integrated Gradients via Captum for word-level attribution, benchmarked against Sequential IG, DeepLIFT, and GradientSHAP using comprehensiveness, sufficiency, and approximation error. Developed a custom rendering pipeline with SpaCy to handle negations and subword tokens. Validated findings with social psychologists, and applied the same method to a small-dataset scenario using deliberate overfitting to surface class-defining keywords. Submitted to IEEE Transactions on Affective Computing.</p>
+        <p>Fine-tuned BERT, RoBERTa, and BERTAgent on the <em>Slurs</em> dataset, women's accounts of verbal harassment labeled for shame, fear, and sexual objectification. Applied Integrated Gradients via Captum for word-level attribution, benchmarked against Sequential IG, DeepLIFT, and GradientSHAP using comprehensiveness, sufficiency, and approximation error. Developed a custom rendering pipeline with SpaCy to handle negations and subword tokens. Validated findings with social psychologists, and applied the same method to a small-dataset scenario using deliberate overfitting to surface class-defining keywords. arXiv preprint (2025), submitted for journal publication.</p>
         <div class="project-images">
           <img src="./screenshots/with_grouping.png" alt="Explainability Demo 1"/>
           <img src="./screenshots/IG10.png" alt="Explainability Demo 2"/>
@@ -217,7 +230,7 @@
           <span class="project-year">2026</span>
         </div>
         <h3>Image Captioning Application</h3>
-        <p>Gradio app built around <strong>Salesforce/blip-image-captioning-base</strong> with two modes: upload a single image for an instant caption, or paste a webpage URL to scrape, filter, and batch-caption all images, exporting results as a downloadable <code>captions.txt</code>. Uses beam search with anti-repetition tuning to avoid degenerate outputs. Deployable on Hugging Face Spaces or Docker. Built as part of the IBM AI Developer Professional Certificate.</p>        <img src="./screenshots/caption.gif" alt="Image Captioning Demo"/>
+        <p>Gradio app built around <strong>Salesforce/blip-image-captioning-base</strong> with two modes: upload a single image for an instant caption, or paste a webpage URL to scrape, filter, and batch-caption all images, exporting results as a downloadable <code>captions.txt</code>. Uses beam search with anti-repetition tuning to avoid degenerate outputs. Deployable on Hugging Face Spaces or Docker.</p>        <img src="./screenshots/caption.gif" alt="Image Captioning Demo"/>
         <div class="project-footer">
           <div class="tech-tags">
             <span>BLIP</span><span>Gradio</span><span>Transformers</span><span>BeautifulSoup</span><span>Docker</span>
@@ -300,7 +313,7 @@
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2019 — 2022</div>
+        <div class="timeline-date">Nov 2019 — Mar 2022</div>
         <div class="timeline-body">
           <h3>Technical Expert</h3>
           <span class="timeline-org">Mazand Phase Industrial Electricity Co., Iran</span>
@@ -389,6 +402,12 @@
       </div>
 
     </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center; padding: 3rem 1rem;">
+    <p style="font-size: 1.1rem; margin-bottom: 0.75rem;">Currently open to NLP and GenAI roles in the Netherlands.</p>
+    <a href="mailto:ali.aghababaei96@gmail.com" class="nav-cta" style="display:inline-block;">Get in touch</a>
   </section>
 
   <!-- FOOTER -->
