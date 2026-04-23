@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ali Aghababaei — NLP & Generative AI Engineer</title>
-  <meta name="description" content="Ali Aghababaei — NLP & Generative AI Engineer specializing in machine learning, explainable AI, and large language models. Portfolio, projects, and research.">
+  <title>Ali Aghababaei | NLP & Generative AI Engineer</title>
+  <meta name="description" content="Ali Aghababaei | NLP & Generative AI Engineer specializing in machine learning, explainable AI, and large language models. Portfolio, projects, and research.">
   <meta name="author" content="Ali Aghababaei">
   <meta name="google-site-verification" content="UqfS50Fac2an6SuSHAoQwTYhbuDD3ukh6_mhwNSeXzg" />
   <meta name="keywords" content="Ali Aghababaei, NLP Engineer, Generative AI, Machine Learning, AI Engineer, Portfolio, Explainable AI, LLM">
@@ -92,16 +92,13 @@
     <div class="about-layout">
       <h2 class="section-title">From <i>Slurs</i> dataset<br>to generative AI</h2>
       <div class="about-body">
-        <p>My path into NLP started with real data about real harm. The <em>Slurs</em> dataset contains 336 accounts written by women describing experiences of verbal harassment, labeled by social psychologists for shame, fear, and sexual objectification. Fine-tuning BERT and RoBERTa on it was meaningful work. But the question that hooked me was harder: <em>which words are actually driving the model's decisions, and by how much?</em></p>
+        <div class="about-body">
+          <p>My NLP journey started with my thesis, working alongside Prof. Tomaso Erseghe at the University of Padova. We were training BERT and RoBERTa on the <em>Slurs</em> dataset, real accounts of verbal harassment labeled by social psychologists, and the question that grabbed me was: <em>which words are actually driving the model's decisions?</em></p>
 
-        <p>That question led to my thesis and eventually to a published paper. I applied Integrated Gradients via Captum for token-level attribution, benchmarked against DeepLIFT and GradientSHAP, and built a custom SpaCy pipeline to handle negations and subword tokens so the output was readable to social psychologists, not just engineers. The unconventional part: for small labeled datasets, we deliberately encouraged overfitting to surface the words most distinctively tied to each class. It worked. The findings were validated by social psychologists across three universities in Italy and Poland.</p>
+          <p>That question pulled me deep into explainability tools, Integrated Gradients, Captum, SpaCy, and the broader Hugging Face ecosystem. My progress on the thesis caught my supervisor's attention, and he invited me to join his wider research team, a collaboration spanning the University of Padova and SWPS University in Warsaw, bringing together NLP engineers and social psychologists. That work led to a published arXiv paper with me as first co-author.</p>
 
-        <p>That project taught me something I carry into everything now: a model that classifies without explaining is only half useful. The other half is knowing why. That instinct is what pushed me toward evaluation-first engineering. When I built the Dutch Constitution RAG pipeline, I didn't stop at deployment. I added a full RAGAS evaluation layer, Faithfulness 0.833 and Answer Relevancy 0.657 on a held-out test set, because shipping without measuring is just guessing.</p>
-
-        <p>The longer arc: Electrical Engineering degree in Iran, two and a half years designing industrial power systems, then an MSc in ICT at Padova where LLMs arrived mid-degree and changed what I wanted to build. I finished top of my cohort with a thesis on explainability, moved to Rotterdam, and have been building and evaluating NLP systems since.</p>
-
-        <p>I am looking for NLP and GenAI engineering roles in the Netherlands where the work is serious: systems that ship, get measured, and improve.</p>
-      </div>
+          <p>Since then I have been building production-ready GenAI systems: fine-tuned transformers deployed as live APIs, RAG pipelines with automated evaluation, and models grounded in measurable quality metrics rather than vibes. I moved to Rotterdam in 2026 and I am looking for NLP and GenAI engineering roles in the Netherlands where the work is serious and the systems actually ship.</p>
+        </div>
     </div>
 
     <!-- Education inline -->
@@ -162,14 +159,14 @@
         </div>
       </article>
 
-      <article class="project-card">
+      <article class="project-card featured">
         <div class="project-meta">
           <span class="project-tag">RAG · GenAI · Evaluation</span>
           <span class="project-year">2026</span>
         </div>
         <h3>Dutch Constitution Q&amp;A (RAG Pipeline)</h3>
         <p>End-to-end Retrieval-Augmented Generation system that answers questions about the <strong>Dutch Constitution (2023)</strong> with Article citations, grounded entirely in the source document. Built an automated evaluation layer using <strong>RAGAS</strong> — achieving <strong>Faithfulness: 0.833</strong> and <strong>Answer Relevancy: 0.657</strong> on a held-out test set. Pipeline: PDF ingestion → chunking → MiniLM embeddings → ChromaDB → Llama 3.1 via Groq. Served via FastAPI REST API and Gradio UI on HuggingFace Spaces. Includes 13 pytest tests covering retriever, chain, and API layers.</p>
-        <img src="./screenshots/rag.gif" alt="RAG Pipeline Demo"/>
+        <img src="./screenshots/rag.mp4" alt="RAG Pipeline Demo"/>
         <div class="project-footer">
           <div class="tech-tags">
             <span>LangChain</span><span>ChromaDB</span><span>RAG</span><span>RAGAS</span><span>Llama 3.1</span><span>FastAPI</span><span>Gradio</span><span>Docker</span><span>sentence-transformers</span>
@@ -317,7 +314,7 @@
         <div class="timeline-body">
           <h3>Technical Expert</h3>
           <span class="timeline-org">Mazand Phase Industrial Electricity Co., Iran</span>
-          <p>Managed engineering operations in industrial environments, then made a deliberate pivot into AI and machine learning research when LLMs changed what research could look like overnight.</p>
+          <p>Designed and drafted low and medium voltage electrical panels using AutoCAD and ePLAN, developed test methodologies for power systems, supervised project execution from design through commissioning, and delivered technical training to industrial clients.</p>
         </div>
       </div>
 
