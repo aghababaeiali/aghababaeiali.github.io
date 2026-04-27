@@ -7,7 +7,7 @@
   <meta name="description" content="Ali Aghababaei | NLP & Generative AI Engineer specializing in machine learning, explainable AI, and large language models. Portfolio, projects, and research.">
   <meta name="author" content="Ali Aghababaei">
   <meta name="google-site-verification" content="UqfS50Fac2an6SuSHAoQwTYhbuDD3ukh6_mhwNSeXzg" />
-  <meta name="keywords" content="Ali Aghababaei, NLP Engineer, Generative AI, Machine Learning, AI Engineer, Portfolio, Explainable AI, LLM">
+  <meta name="keywords" content="Ali Aghababaei, NLP Engineer, Generative AI, Machine Learning, AI Engineer, Portfolio, Explainable AI, LLM, LangGraph, Agentic AI, RAG, RAGAS">
   <link rel="icon" href="./icons/favicon.png" type="image/png">
   <link rel="icon" sizes="32x32" href="./icons/favicon-32.png">
   <link rel="icon" sizes="16x16" href="./icons/favicon-16.png">
@@ -70,7 +70,7 @@
       <div class="hero-badge"><span class="dot"></span> Open to opportunities · Netherlands</div>
       <h1 class="hero-name">Ali<br><em>Aghababaei</em></h1>
       <p class="hero-role">NLP &amp; Generative AI Engineer</p>
-      <p class="hero-tagline">I build and evaluate GenAI systems: RAG pipelines with measurable quality scores, explainable NLP grounded in real human data, and transformer models deployed end-to-end.</p>
+      <p class="hero-tagline">I build and evaluate GenAI systems: agentic AI with LangGraph, RAG pipelines with measurable quality scores, explainable NLP grounded in real human data, and transformer models deployed end-to-end.</p>
       <div class="hero-actions">
         <div class="hero-photo-frame" style="width: 200px; height: 200px;">
           <img src="./photo.jpeg" alt="Ali Aghababaei" style="width: 100%; height: 100%; object-fit: cover;"/>
@@ -92,13 +92,12 @@
     <div class="about-layout">
       <h2 class="section-title">From <i>Slurs</i> dataset<br>to generative AI</h2>
       <div class="about-body">
-        <div class="about-body">
-          <p>My NLP journey started with my thesis, working alongside Prof. Tomaso Erseghe at the University of Padova. We were training BERT and RoBERTa on the <em>Slurs</em> dataset, real accounts of verbal harassment labeled by social psychologists, and the question that grabbed me was: <em>which words are actually driving the model's decisions?</em></p>
+        <p>My NLP journey started with my thesis, working alongside Prof. Tomaso Erseghe at the University of Padova. We were training BERT and RoBERTa on the <em>Slurs</em> dataset, real accounts of verbal harassment labeled by social psychologists, and the question that grabbed me was: <em>which words are actually driving the model's decisions?</em></p>
 
-          <p>That question pulled me deep into explainability tools, Integrated Gradients, Captum, SpaCy, and the broader Hugging Face ecosystem. My progress on the thesis caught my supervisor's attention, and he invited me to join his wider research team, a collaboration spanning the University of Padova and SWPS University in Warsaw, bringing together NLP engineers and social psychologists. That work led to a published arXiv paper with me as first co-author.</p>
+        <p>That question pulled me deep into explainability tools, Integrated Gradients, Captum, SpaCy, and the broader Hugging Face ecosystem. My progress on the thesis caught my supervisor's attention, and he invited me to join his wider research team, a collaboration spanning the University of Padova and SWPS University in Warsaw, bringing together NLP engineers and social psychologists. That work led to a published arXiv paper with me as first co-author.</p>
 
-          <p>Since then I have been building production-ready GenAI systems: fine-tuned transformers deployed as live APIs, RAG pipelines with automated evaluation, and models grounded in measurable quality metrics rather than vibes. I moved to Rotterdam in 2026 and I am looking for NLP and GenAI engineering roles in the Netherlands where the work is serious and the systems actually ship.</p>
-        </div>
+        <p>Since then I have been building production-ready GenAI systems: a LangGraph research agent that searches arXiv live and self-evaluates with RAGAS (Faithfulness 0.921 across 20 queries), fine-tuned transformers deployed as live APIs, and RAG pipelines grounded in measurable quality metrics rather than vibes. I moved to Rotterdam in 2026 and I am looking for NLP and GenAI engineering roles in the Netherlands where the work is serious and the systems actually ship.</p>
+      </div>
     </div>
 
     <!-- Education inline -->
@@ -138,46 +137,74 @@
     <div class="projects-grid">
 
       <article class="project-card featured">
-        <div class="project-meta">
-          <span class="project-tag">Explainability · Research</span>
-          <span class="project-year">2025</span>
+        <div class="card-body">
+          <div class="project-meta">
+            <span class="project-tag">Explainability · Research</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>Explainable NLP with Integrated Gradients</h3>
+          <p>Fine-tuned BERT, RoBERTa, and BERTAgent on the <em>Slurs</em> dataset, women's accounts of verbal harassment labeled for shame, fear, and sexual objectification. Applied Integrated Gradients via Captum for word-level attribution, benchmarked against Sequential IG, DeepLIFT, and GradientSHAP using comprehensiveness, sufficiency, and approximation error. Developed a custom rendering pipeline with SpaCy to handle negations and subword tokens. Validated findings with social psychologists, and applied the same method to a small-dataset scenario using deliberate overfitting to surface class-defining keywords. arXiv preprint (2025), submitted for journal publication.</p>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span>BERT</span><span>RoBERTa</span><span>BERTAgent</span><span>Transformers</span><span>Captum</span><span>SHAP</span><span>DeepLIFT</span><span>SpaCy</span>
+            </div>
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2503.04989" target="_blank">Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/aghababaeiali/agency-ig" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
         </div>
-        <h3>Explainable NLP with Integrated Gradients</h3>
-        <p>Fine-tuned BERT, RoBERTa, and BERTAgent on the <em>Slurs</em> dataset, women's accounts of verbal harassment labeled for shame, fear, and sexual objectification. Applied Integrated Gradients via Captum for word-level attribution, benchmarked against Sequential IG, DeepLIFT, and GradientSHAP using comprehensiveness, sufficiency, and approximation error. Developed a custom rendering pipeline with SpaCy to handle negations and subword tokens. Validated findings with social psychologists, and applied the same method to a small-dataset scenario using deliberate overfitting to surface class-defining keywords. arXiv preprint (2025), submitted for journal publication.</p>
         <div class="project-images">
           <img src="./screenshots/with_grouping.png" alt="Explainability Demo 1"/>
           <img src="./screenshots/IG10.png" alt="Explainability Demo 2"/>
         </div>
-        <div class="project-footer">
-          <div class="tech-tags">
-            <span>BERT</span><span>RoBERTa</span><span>BERTAgent</span><span>Transformers</span><span>Captum</span><span>SHAP</span><span>DeepLIFT</span><span>SpaCy</span>
-          </div>
-          <div class="project-links">
-            <a href="https://arxiv.org/abs/2503.04989" target="_blank">Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="https://github.com/aghababaeiali/agency-ig" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
-          </div>
-        </div>
       </article>
 
       <article class="project-card featured">
-        <div class="project-meta">
-          <span class="project-tag">RAG · GenAI · Evaluation</span>
-          <span class="project-year">2026</span>
-        </div>
-        <h3>Dutch Constitution Q&amp;A (RAG Pipeline)</h3>
-        <p>End-to-end Retrieval-Augmented Generation system that answers questions about the <strong>Dutch Constitution (2023)</strong> with Article citations, grounded entirely in the source document. Built an automated evaluation layer using <strong>RAGAS</strong> — achieving <strong>Faithfulness: 0.833</strong> and <strong>Answer Relevancy: 0.657</strong> on a held-out test set. Pipeline: PDF ingestion → chunking → MiniLM embeddings → ChromaDB → Llama 3.1 via Groq. Served via FastAPI REST API and Gradio UI on HuggingFace Spaces. Includes 13 pytest tests covering retriever, chain, and API layers.</p>
-        <img src="./screenshots/rag.mp4" alt="RAG Pipeline Demo"/>
-        <div class="project-footer">
-          <div class="tech-tags">
-            <span>LangChain</span><span>ChromaDB</span><span>RAG</span><span>RAGAS</span><span>Llama 3.1</span><span>FastAPI</span><span>Gradio</span><span>Docker</span><span>sentence-transformers</span>
+        <div class="card-body">
+          <div class="project-meta">
+            <span class="project-tag">Agentic AI · LangGraph · Evaluation</span>
+            <span class="project-year">2026</span>
           </div>
-          <div class="project-links">
-            <a href="https://huggingface.co/spaces/aliabbi/dutch-constitution-qa" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="https://github.com/aghababaeiali/rag-document-qa" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+          <h3>Research Paper Q&amp;A Agent</h3>
+          <p>An agentic AI system built with <strong>LangGraph</strong> that answers research questions by searching <strong>arXiv live</strong>, retrieving relevant paper chunks, detecting contradictions between sources, and generating grounded answers with inline citations. The agent reasons and loops: if initial search results are insufficient, it reformulates queries and retries up to 3 times before gracefully exiting. Evaluated with <strong>RAGAS</strong> across 20 queries: <strong>Faithfulness 0.921</strong>, <strong>Answer Relevancy 0.885</strong>.</p>
+          <p>Key engineering decisions: per-paper ChromaDB retrieval with global re-ranking to prevent volume bias, session-isolated vector collections via UUID namespacing, dynamic query contextualization to bridge the conversational-to-academic embedding gap, and a gated RAGAS evaluator that runs offline to keep response time acceptable in the live demo.</p>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span>LangGraph</span><span>LangChain</span><span>Groq</span><span>Llama 3.3-70b</span>
+              <span>ChromaDB</span><span>RAG</span><span>RAGAS</span><span>arXiv API</span>
+              <span>sentence-transformers</span><span>PyMuPDF</span><span>Gradio</span>
+            </div>
+            <div class="project-links">
+              <a href="https://huggingface.co/spaces/aliabbi/research-agent" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/aghababaeiali/research-agent" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
           </div>
         </div>
+        <img src="./screenshots/agent.png" alt="Research Paper Q&A Agent Demo"/>
       </article>
 
+      <article class="project-card featured">
+        <div class="card-body">
+          <div class="project-meta">
+            <span class="project-tag">RAG · GenAI · Evaluation</span>
+            <span class="project-year">2026</span>
+          </div>
+          <h3>Dutch Constitution Q&amp;A (RAG Pipeline)</h3>
+          <p>End-to-end Retrieval-Augmented Generation system that answers questions about the <strong>Dutch Constitution (2023)</strong> with Article citations, grounded entirely in the source document. Built an automated evaluation layer using <strong>RAGAS</strong> — achieving <strong>Faithfulness: 0.833</strong> and <strong>Answer Relevancy: 0.657</strong> on a held-out test set. Pipeline: PDF ingestion → chunking → MiniLM embeddings → ChromaDB → Llama 3.1 via Groq. Served via FastAPI REST API and Gradio UI on HuggingFace Spaces. Includes 13 pytest tests covering retriever, chain, and API layers.</p>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span>LangChain</span><span>ChromaDB</span><span>RAG</span><span>RAGAS</span><span>Llama 3.1</span><span>FastAPI</span><span>Gradio</span><span>Docker</span><span>sentence-transformers</span>
+            </div>
+            <div class="project-links">
+              <a href="https://huggingface.co/spaces/aliabbi/dutch-constitution-qa" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/aghababaeiali/rag-document-qa" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <video src="./screenshots/rag.mp4" autoplay loop muted playsinline></video>
+      </article>
+      
       <article class="project-card">
         <div class="project-meta">
           <span class="project-tag">Fine-tuning · Deployment</span>
@@ -188,7 +215,8 @@
         <img src="./screenshots/sentiment.gif" alt="Sentiment Analysis Demo"/>
         <div class="project-footer">
           <div class="tech-tags">
-            <span>DistilBERT</span><span>FastAPI</span><span>Docker</span><span>Render</span><span>Hugging Face</span><span>pytest</span>          </div>
+            <span>DistilBERT</span><span>FastAPI</span><span>Docker</span><span>Render</span><span>Hugging Face</span><span>pytest</span>
+          </div>
           <div class="project-links">
             <a href="https://nlp-sentiment-pipeline.onrender.com" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             <a href="https://github.com/aghababaeiali/nlp-sentiment-pipeline" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
@@ -227,7 +255,8 @@
           <span class="project-year">2026</span>
         </div>
         <h3>Image Captioning Application</h3>
-        <p>Gradio app built around <strong>Salesforce/blip-image-captioning-base</strong> with two modes: upload a single image for an instant caption, or paste a webpage URL to scrape, filter, and batch-caption all images, exporting results as a downloadable <code>captions.txt</code>. Uses beam search with anti-repetition tuning to avoid degenerate outputs. Deployable on Hugging Face Spaces or Docker.</p>        <img src="./screenshots/caption.gif" alt="Image Captioning Demo"/>
+        <p>Gradio app built around <strong>Salesforce/blip-image-captioning-base</strong> with two modes: upload a single image for an instant caption, or paste a webpage URL to scrape, filter, and batch-caption all images, exporting results as a downloadable <code>captions.txt</code>. Uses beam search with anti-repetition tuning to avoid degenerate outputs. Deployable on Hugging Face Spaces or Docker.</p>
+        <img src="./screenshots/caption.gif" alt="Image Captioning Demo"/>
         <div class="project-footer">
           <div class="tech-tags">
             <span>BLIP</span><span>Gradio</span><span>Transformers</span><span>BeautifulSoup</span><span>Docker</span>
@@ -255,31 +284,32 @@
     <h2 class="section-title">Technical toolkit</h2>
     <div class="skills-layout">
 
-      <div class="skill-group">
+      <div class="skill-group skill-group--nlp">
         <div class="skill-group-label">NLP & LLMs</div>
         <div class="skills-grid">
+          <span>LangGraph</span><span>Agentic AI</span><span>RAG</span><span>LangChain</span>
+          <span>ChromaDB</span><span>Vector Databases</span><span>RAGAS</span><span>LLM Evaluation</span>
+          <span>LLMs / Generative AI</span><span>LLM APIs</span><span>Prompt Engineering</span>
           <span>Python</span><span>PyTorch</span><span>Hugging Face Transformers</span>
           <span>BERT</span><span>RoBERTa</span><span>T5 / FLAN-T5</span>
+          <span>Fine-tuning</span><span>LoRA / PEFT</span><span>SpaCy</span>
           <span>Text Classification</span><span>Summarization</span><span>Sequence-to-Sequence</span>
-          <span>Fine-tuning</span><span>LoRA / PEFT</span><span>Prompt Engineering</span>
-          <span>LLMs / Generative AI</span><span>LLM APIs</span><span>SpaCy</span>
-          <span>RAG</span><span>LangChain</span><span>ChromaDB</span><span>RAGAS</span><span>Vector Databases</span>
         </div>
       </div>
 
-      <div class="skill-group">
+      <div class="skill-group skill-group--ml">
         <div class="skill-group-label">ML Engineering & Deployment</div>
         <div class="skills-grid">
           <span>Scikit-learn</span><span>NumPy</span><span>Pandas</span>
           <span>Data Preprocessing</span><span>ROUGE</span><span>Model Evaluation</span><span>Error Analysis</span>
           <span>REST APIs</span><span>FastAPI</span><span>Model Serving</span>
           <span>Inference Pipelines</span><span>Docker</span><span>Gradio</span>
-          <span>Hugging Face Hub / Spaces</span><span>Pytest</span><span>Git</span>
+          <span>Hugging Face Hub / Spaces</span><span>Pytest</span><span>Git</span><span>LLM-as-Judge</span>
           <span>SQL</span><span>Deployment Automation</span>
         </div>
       </div>
 
-      <div class="skill-group">
+      <div class="skill-group skill-group--xai">
         <div class="skill-group-label">Explainability & Analysis</div>
         <div class="skills-grid">
           <span>Explainable AI (XAI)</span><span>Integrated Gradients</span><span>SHAP</span>

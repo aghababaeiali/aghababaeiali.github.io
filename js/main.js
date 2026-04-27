@@ -88,5 +88,59 @@ window.addEventListener("scroll", () => {
 
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  backToTop.blur(); // ← force-clears the active/focus state
+  backToTop.blur();
+});
+
+// ── Lightbox ──────────────────────────────────────────────────
+const lightbox = document.createElement("div");
+lightbox.className = "lightbox";
+lightbox.innerHTML = `
+  <div class="lightbox-inner">
+    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="lightbox-content"></div>
+  </div>`;
+document.body.appendChild(lightbox);
+
+const lightboxContent = lightbox.querySelector(".lightbox-content");
+const lightboxInner   = lightbox.querySelector(".lightbox-inner");
+const lightboxClose   = lightbox.querySelector(".lightbox-close");
+
+function openLightbox(el) {
+  let media;
+  if (el.tagName === "VIDEO") {
+    media = document.createElement("video");
+    media.src = el.src;
+    media.autoplay = true;
+    media.loop = true;
+    media.muted = true;
+    media.controls = true;
+    media.playsInline = true;
+  } else {
+    media = document.createElement("img");
+    media.src = el.src;
+    media.alt = el.alt || "";
+  }
+  lightboxContent.innerHTML = "";
+  lightboxContent.appendChild(media);
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+  const vid = lightboxContent.querySelector("video");
+  if (vid) vid.pause();
+}
+
+lightbox.addEventListener("click", (e) => {
+  if (!lightboxInner.contains(e.target)) closeLightbox();
+});
+lightboxClose.addEventListener("click", closeLightbox);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLightbox();
+});
+
+document.querySelectorAll(".project-card img, .project-card video").forEach(el => {
+  el.addEventListener("click", (e) => { e.stopPropagation(); openLightbox(el); });
 });
