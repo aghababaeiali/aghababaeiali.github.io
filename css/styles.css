@@ -975,6 +975,7 @@ em { font-family: var(--font-display); font-style: italic; }
   .project-card.featured > .project-images,
   .project-card.featured > .project-media-placeholder { order: unset; }
   .skills-layout { grid-template-columns: 1fr; }
+  .lightbox.active { backdrop-filter: none; }
 
   .menu-button {
     display: block;
@@ -1072,15 +1073,19 @@ a:focus-visible {
   justify-content: center;
   padding: 24px;
   background: rgba(0, 0, 0, 0.88);
-  backdrop-filter: blur(6px);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s ease;
+  /* delay visibility so it hides only after the opacity fade-out completes */
+  transition: opacity 0.25s ease, visibility 0s 0.25s;
 }
 
 .lightbox.active {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.25s ease, visibility 0s 0s;
 }
 
 .lightbox-inner {
