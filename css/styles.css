@@ -973,11 +973,11 @@ em { font-family: var(--font-display); font-style: italic; }
     grid-column: span 1;
     grid-template-columns: 1fr;
   }
-  .project-card.featured .card-body,
-  .project-card.featured > video,
-  .project-card.featured > img,
-  .project-card.featured > .project-images,
-  .project-card.featured > .project-media-placeholder { order: unset; }
+  .project-card.featured:nth-child(even) .card-body { order: unset; }
+  .project-card.featured:nth-child(even) > video,
+  .project-card.featured:nth-child(even) > img,
+  .project-card.featured:nth-child(even) > .project-images,
+  .project-card.featured:nth-child(even) > .project-media-placeholder { order: unset; }
   .skills-layout { grid-template-columns: 1fr; }
   .lightbox.active { backdrop-filter: none; }
 
