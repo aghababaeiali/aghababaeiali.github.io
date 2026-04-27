@@ -51,11 +51,12 @@ sections.forEach(s => activeObserver.observe(s));
 const nav = document.getElementById("nav");
 
 if (nav) {
-  window.addEventListener("scroll", () => {
-    nav.style.background = window.scrollY > 10
-      ? "rgba(11,12,15,0.95)"
-      : "rgba(11,12,15,0.75)";
-  }, { passive: true });
+  const updateNavState = () => {
+    nav.classList.toggle("scrolled", window.scrollY > 10);
+  };
+
+  updateNavState();
+  window.addEventListener("scroll", updateNavState, { passive: true });
 }
 
 // ── Mobile menu toggle ───────────────────────────────────────
@@ -143,4 +144,16 @@ document.addEventListener("keydown", (e) => {
 
 document.querySelectorAll(".project-card img, .project-card video").forEach(el => {
   el.addEventListener("click", (e) => { e.stopPropagation(); openLightbox(el); });
+});
+
+const touchInput = window.matchMedia("(hover: none), (pointer: coarse)");
+
+function blurAfterTouch(el) {
+  if (!touchInput.matches || typeof el.blur !== "function") return;
+  window.setTimeout(() => el.blur(), 0);
+}
+
+document.querySelectorAll("a, button, .menu-button").forEach(el => {
+  el.addEventListener("pointerup", () => blurAfterTouch(el));
+  el.addEventListener("touchend", () => blurAfterTouch(el), { passive: true });
 });
