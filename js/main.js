@@ -1,3 +1,13 @@
+const root = document.documentElement;
+const touchInput = window.matchMedia("(hover: none), (pointer: coarse)");
+
+function enableTouchMode() {
+  root.classList.add("is-touch");
+}
+
+if (touchInput.matches) enableTouchMode();
+window.addEventListener("touchstart", enableTouchMode, { passive: true });
+
 // ── Page load fade-in ────────────────────────────────────────
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
@@ -146,10 +156,8 @@ document.querySelectorAll(".project-card img, .project-card video").forEach(el =
   el.addEventListener("click", (e) => { e.stopPropagation(); openLightbox(el); });
 });
 
-const touchInput = window.matchMedia("(hover: none), (pointer: coarse)");
-
 function blurAfterTouch(el) {
-  if (!touchInput.matches || typeof el.blur !== "function") return;
+  if ((!touchInput.matches && !root.classList.contains("is-touch")) || typeof el.blur !== "function") return;
   window.setTimeout(() => el.blur(), 0);
 }
 

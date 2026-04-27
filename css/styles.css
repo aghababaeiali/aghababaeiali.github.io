@@ -23,7 +23,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
 
 body {
   font-family: var(--font-body);
@@ -51,7 +54,7 @@ em { font-family: var(--font-display); font-style: italic; }
    NAV
    ============================================================ */
 .nav {
-  position: fixed;
+  position: sticky;
   top: 0; left: 0; right: 0;
   bottom: auto;
   z-index: 1000;
@@ -69,7 +72,7 @@ em { font-family: var(--font-display); font-style: italic; }
 
 .nav-inner {
   max-width: var(--max-w);
-  margin: auto;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   align-items: center;
@@ -133,13 +136,19 @@ em { font-family: var(--font-display); font-style: italic; }
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-h));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: calc(var(--nav-h) + 60px) 24px 80px;
+  padding: 60px 24px 80px;
+}
+
+@supports (height: 100svh) {
+  .hero {
+    min-height: calc(100svh - var(--nav-h));
+  }
 }
 
 .hero-bg {
@@ -1005,8 +1014,8 @@ em { font-family: var(--font-display); font-style: italic; }
   }
 
   .nav-links {
-    position: fixed;
-    top: var(--nav-h);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--surface);
@@ -1128,9 +1137,67 @@ em { font-family: var(--font-display); font-style: italic; }
   }
 }
 
+.is-touch .nav-links a:hover {
+  color: var(--text-secondary);
+}
+
+.is-touch .nav-links a.active:hover {
+  color: var(--text-primary);
+}
+
+.is-touch .nav-cta:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.is-touch .contact-pill:hover {
+  border-color: var(--border);
+  color: var(--text-secondary);
+  background: var(--surface);
+}
+
+.is-touch .project-card:hover,
+.is-touch .rec-card:hover {
+  border-color: var(--border);
+  transform: none;
+}
+
+.is-touch .project-links a:hover {
+  opacity: 1;
+}
+
+.is-touch .more-link:hover {
+  gap: 6px;
+}
+
+.is-touch .skills-grid span:hover {
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.is-touch .inline-link:hover {
+  gap: 5px;
+}
+
+.is-touch .footer-links a:hover {
+  color: var(--text-muted);
+}
+
+.is-touch .back-to-top:hover,
+.is-touch .back-to-top:active,
+.is-touch .back-to-top:focus {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
 /* Accessibility focus styles */
 a:focus:not(:focus-visible),
 button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.is-touch a:focus,
+.is-touch button:focus {
   outline: none;
 }
 
@@ -1207,4 +1274,10 @@ button:focus-visible {
 
 @media (hover: none), (pointer: coarse) {
   .lightbox-close:hover { background: rgba(255, 255, 255, 0.08); }
+}
+
+.is-touch .lightbox-close:hover,
+.is-touch .lightbox-close:active,
+.is-touch .lightbox-close:focus {
+  background: rgba(255, 255, 255, 0.08);
 }
