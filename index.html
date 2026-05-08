@@ -187,14 +187,14 @@
       <article class="project-card featured">
         <div class="card-body">
           <div class="project-meta">
-            <span class="project-tag">RAG · GenAI · Evaluation</span>
+            <span class="project-tag">RAG · GenAI · MLOps</span>
             <span class="project-year">2026</span>
           </div>
           <h3>Dutch Constitution Q&amp;A (RAG Pipeline)</h3>
-          <p>End-to-end Retrieval-Augmented Generation system that answers questions about the <strong>Dutch Constitution (2023)</strong> with Article citations, grounded entirely in the source document. Built an automated evaluation layer using <strong>RAGAS</strong> — achieving <strong>Faithfulness: 0.833</strong> and <strong>Answer Relevancy: 0.657</strong> on a held-out test set. Pipeline: PDF ingestion → chunking → MiniLM embeddings → ChromaDB → Llama 3.1 via Groq. Served via FastAPI REST API and Gradio UI on HuggingFace Spaces. Includes 13 pytest tests covering retriever, chain, and API layers.</p>
+          <p>End-to-end Retrieval-Augmented Generation system that answers questions about the <strong>Dutch Constitution (2023)</strong> with Article citations, grounded entirely in the source document. Includes <strong>RAGAS evaluation</strong>, <strong>MLflow experiment tracking</strong>, and a documented engineering iteration: identified chunk boundary bleeding through tracked runs, replaced character-based splitting with structure-aware Article-level chunking, and improved <strong>Faithfulness from 0.55 to 0.86</strong> (+0.31). Pipeline: PDF ingestion → article-aware split → MiniLM embeddings → ChromaDB → Llama 3.1 via Groq. Served via FastAPI REST API and Gradio UI on HuggingFace Spaces. <strong>GitHub Actions CI/CD pipeline</strong> runs 13 pytest tests on every push and auto-deploys on success.</p>
           <div class="project-footer">
             <div class="tech-tags">
-              <span>LangChain</span><span>ChromaDB</span><span>RAG</span><span>RAGAS</span><span>Llama 3.1</span><span>FastAPI</span><span>Gradio</span><span>Docker</span><span>sentence-transformers</span>
+              <span>LangChain</span><span>ChromaDB</span><span>RAG</span><span>RAGAS</span><span>MLflow</span><span>Llama 3.1</span><span>FastAPI</span><span>Gradio</span><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span><span>sentence-transformers</span>
             </div>
             <div class="project-links">
               <a href="https://huggingface.co/spaces/aliabbi/dutch-constitution-qa" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -298,14 +298,16 @@
       </div>
 
       <div class="skill-group skill-group--ml">
-        <div class="skill-group-label">ML Engineering & Deployment</div>
+        <div class="skill-group-label">ML Engineering & MLOps</div>
         <div class="skills-grid">
           <span>Scikit-learn</span><span>NumPy</span><span>Pandas</span>
           <span>Data Preprocessing</span><span>ROUGE</span><span>Model Evaluation</span><span>Error Analysis</span>
+          <span>MLflow</span><span>Experiment Tracking</span><span>A/B Testing</span><span>LLM-as-Judge</span>
           <span>REST APIs</span><span>FastAPI</span><span>Model Serving</span>
           <span>Inference Pipelines</span><span>Docker</span><span>Gradio</span>
-          <span>Hugging Face Hub / Spaces</span><span>Pytest</span><span>Git</span><span>LLM-as-Judge</span>
-          <span>SQL</span><span>Deployment Automation</span>
+          <span>Hugging Face Hub / Spaces</span><span>Pytest</span><span>Git</span>
+          <span>GitHub Actions</span><span>CI/CD</span><span>Deployment Automation</span>
+          <span>SQL</span>
         </div>
       </div>
 
