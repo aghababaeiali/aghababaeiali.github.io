@@ -518,6 +518,89 @@ em { font-family: var(--font-display); font-style: italic; }
   width: 100%;
 }
 
+.project-media-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  height: 100%;
+  padding: 28px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.stat-row {
+  display: flex;
+  gap: 24px;
+}
+
+.stat-tile {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-tile .stat-value {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  color: var(--accent);
+  line-height: 1.15;
+}
+
+.stat-tile .stat-value small {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.stat-tile .stat-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+}
+
+.stat-flow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.stat-flow .flow-node {
+  color: var(--accent-2);
+}
+
+.stat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+
+.stat-table td {
+  padding: 7px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.stat-table tr:first-child td {
+  border-top: none;
+}
+
+.stat-table td:last-child {
+  text-align: right;
+  color: var(--text-primary);
+}
+
+.stat-table tr.stat-good td:last-child { color: var(--accent); }
+.stat-table tr.stat-bad td:last-child { color: var(--accent-3); }
+
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -641,12 +724,14 @@ em { font-family: var(--font-display); font-style: italic; }
 .project-links a:hover { opacity: 0.7; }
 
 .more-card {
+  grid-column: span 2;
   border-style: dashed;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 12px;
   color: var(--text-muted);
+  padding: 40px 28px;
 }
 
 .more-icon {
@@ -681,7 +766,7 @@ em { font-family: var(--font-display); font-style: italic; }
    ============================================================ */
 .skills-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   align-items: start;
 }
@@ -694,8 +779,9 @@ em { font-family: var(--font-display); font-style: italic; }
   padding: 24px;
 }
 
-.skill-group--ml  { border-top-color: var(--accent-2); }
-.skill-group--xai { border-top-color: var(--accent-3); }
+.skill-group--ml    { border-top-color: var(--accent-2); }
+.skill-group--cloud { border-top-color: var(--accent-3); }
+.skill-group--xai   { border-top-color: var(--accent); }
 
 .skill-group-label {
   font-family: var(--font-mono);
