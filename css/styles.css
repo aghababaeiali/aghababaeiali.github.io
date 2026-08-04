@@ -1092,6 +1092,7 @@ em { font-family: var(--font-display); font-style: italic; }
   .project-card.featured:nth-child(even) > img,
   .project-card.featured:nth-child(even) > .project-images,
   .project-card.featured:nth-child(even) > .project-media-placeholder { order: 4; }
+  .more-card { grid-column: span 1; }
   .skills-layout { grid-template-columns: 1fr; }
   .lightbox.active { backdrop-filter: none; }
 
